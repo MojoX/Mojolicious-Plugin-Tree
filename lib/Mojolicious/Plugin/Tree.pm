@@ -233,37 +233,3 @@ sub decompress_int {
 
 1;
 
-__END__
-
-=encoding utf8
-
-=head1 NAME
-
-Mojolicious::Plugin::Tree - Mojolicious Plugin
-
-=head1 SYNOPSIS
-
-    # Mojolicious
-    my $pg = Mojo::Pg->new('postgresql://test:test@localhost/tree');
-    $self->plugin('Tree'=>{pg=>$pg, namespace=>'tree'});
-
-=head1 DESCRIPTION
-
-L<Mojolicious::Plugin::Tree> is a L<Mojolicious> plugin.
-
-=head1 METHODS
-
-L<Mojolicious::Plugin::Tree> inherits all methods from
-L<Mojolicious::Plugin> and implements the following new ones.
-
-=head2 register
-
-    $plugin->register(Mojolicious->new);
-
-Register plugin in L<Mojolicious> application.
-
-=head1 SEE ALSO
-
-L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicious.org>.
-
-=cut
