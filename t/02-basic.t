@@ -8,7 +8,11 @@ use Try::Tiny;
 use FindBin;
 use lib "$FindBin::Bin/../lib/";
 
-my $pg = Mojo::Pg->new('postgresql://postgres@localhost/tree');
+my $pg;
+if(defined $ENV{'TEST_ONLINE'} && $ENV{'TEST_ONLINE'} == 1){
+    $pg = Mojo::Pg->new('postgresql://postgres@localhost/tree');
+}
+
 
 $pg->db->query('DROP TABLE IF EXISTS tree;');
 $pg->db->query('

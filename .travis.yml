@@ -15,8 +15,6 @@ services:
   - postgresql
 addons:
   postgresql: "9.6"
-env:
-  - "TEST_ONLINE=1"
 before_script:
   - psql -c 'create database tree;' -U postgres
 
