@@ -12,7 +12,9 @@ my $pg;
 if(defined $ENV{'TEST_ONLINE'} && $ENV{'TEST_ONLINE'} == 1){
     $pg = Mojo::Pg->new('postgresql://postgres@localhost/tree');
 }
-
+else{
+    $pg = Mojo::Pg->new('postgresql://test:test@localhost/test');
+}
 
 $pg->db->query('DROP TABLE IF EXISTS tree;');
 $pg->db->query('
