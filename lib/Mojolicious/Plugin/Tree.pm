@@ -165,8 +165,9 @@ sub move {
 
 	my $path        = $get_id->{'path'};
 	my $path_target = $get_target_id->{'path'};
-	croak "Impossible to transfer to itself or children" if($path =~ m/^$path_target/);
+	croak "Impossible to transfer to itself or children" if($path =~ m/^$path_target/x);
 
+    return;
 }
 
 sub path {
