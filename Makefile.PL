@@ -12,6 +12,7 @@ WriteMakefile(
         'Mojo::Pg' => '4.01',
         'SQL::Abstract::More' => '1.28',
         'Try::Tiny' => '0.28',
+        'Test::Perl::Critic' => '1.03',
     },
     test => {TESTS => 't/*.t'}
 );
